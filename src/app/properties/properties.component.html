@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">isActive</th>
+                        <th scope="col">PropertyIdentificationNumber</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">YearOfConstruction</th>
+                        <th scope="col">PropertyType</th>
+                        <th scope="col">Owner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let properties of propertiesListData | async">
+                        <th scope="row">{{properties.id}}</th>
+                        <td>{{properties.isActive}}</td>
+                        <td>{{properties.propertyIdentificationNumber}}</td>
+                        <td>{{properties.address}}</td>
+                        <td>{{properties.yearOfConstruction}}</td>
+                        <td>{{properties.propertyType}}</td>
+                        <td>{{properties.owner.name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

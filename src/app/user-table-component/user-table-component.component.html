@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Surname</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">User Role</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of userListData | async">
+                        <th scope="row">{{user.id}}</th>
+                        <td>{{user.name}}</td>
+                        <td>{{user.surname}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.role}}</td>
+                        <td>
+                            <div class="col-md-auto">
+                                <!-- <button type="button" class="btn btn-primary">
+                                    Edit
+                                </button> -->
+                                <button type="button" class="btn btn-warning" (click)="deleteUser(user)">
+                                    Delete
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br>
+
+<br>
+<app-register></app-register>

@@ -1,0 +1,8 @@
+export enum StatusType {
+
+    PENDING='PENDING',
+    DECLINED='DECLINED',
+    ACCEPTED='ACCEPTED',
+    IN_PROGRESS='IN_PROGRESS',
+    COMPLETE='COMPLETE'
+}

@@ -1,0 +1,7 @@
+export enum PropertyRepairType {
+    PAINTING = 'PAINTING',
+    INSULATION = 'INSULATION',
+    FRAMES = 'FRAMES',
+    PLUMBING = 'PLUMBING',
+    ELECTRICAL_WORK = 'ELECTRICAL_WORK'
+}

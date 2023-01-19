@@ -1,0 +1,34 @@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">repairType</th>
+            <th scope="col">description</th>
+            <th scope="col">workToBeDone</th>
+            <th scope="col">proposedStartDate</th>
+            <th scope="col">proposedEndDate</th>
+            <th scope="col">cost</th>
+            <th scope="col">ownerAcceptance</th>
+            <th scope="col">status</th>
+            <th scope="col">actualStartDate</th>
+            <th scope="col">actualEndDate</th>
+            <th scope="col">isActive</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let propertyRepair of propertyRepairListData | async">
+            <th scope="row">{{propertyRepair.id}}</th>
+            <td>{{propertyRepair.repairType}}</td>
+            <td>{{propertyRepair.description}}</td>
+            <td>{{propertyRepair.workToBeDone}}</td>
+            <td>{{propertyRepair.proposedStartDate}}</td>
+            <td>{{propertyRepair.proposedEndDate}}</td>
+            <td>{{propertyRepair.cost}}</td>
+            <td>{{propertyRepair.ownerAcceptance}}</td>
+            <td>{{propertyRepair.status}}</td>
+            <td>{{propertyRepair.actualStartDate}}</td>
+            <td>{{propertyRepair.actualEndDate}}</td>
+            <td>{{propertyRepair.isActive}}</td>
+        </tr>
+    </tbody>
+</table>
